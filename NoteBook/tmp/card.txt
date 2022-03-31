@@ -1,0 +1,8 @@
+readAll
+save
+2
+save
+3
+readAll
+remove 1
+readAll
