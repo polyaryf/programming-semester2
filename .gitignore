@@ -24,7 +24,7 @@ target/
 dist/
 
 # JetBrains IDE
-.idea/
+NoteBook/.idea/.idea/
 out
 
 # Unit test reports
