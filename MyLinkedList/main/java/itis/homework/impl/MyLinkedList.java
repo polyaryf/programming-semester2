@@ -136,7 +136,38 @@ public class MyLinkedList<T> implements List<T> {
     }
 
     public T remove(int index) {
-        return null;
+        if (isEmpty()) {
+            throw new NoSuchElementException();
+        }
+        if (size == 1) {
+            clear();
+            return get(0);
+        }
+        Node current = head;
+        for (int i = 0; i < index ; i++) {
+            if(current.next == null) {
+                throw new NoSuchElementException();
+            }
+            current = current.next;
+        }
+        if (current.value == null) {
+            throw new NoSuchElementException();
+        }
+        Node pre = current.previous;
+        Node next = current.next;
+
+        if (pre == null) {
+            head = next;
+            head.previous = null;
+        } else if(next == null) {
+            tail = pre;
+            tail.next = null;
+        } else {
+            pre.next = next;
+            next.previous = pre;
+        }
+        size--;
+        return get(index);
     }
 
     public T set(int index, T element) {

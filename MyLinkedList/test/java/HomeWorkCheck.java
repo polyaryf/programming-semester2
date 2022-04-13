@@ -31,7 +31,7 @@ public class HomeWorkCheck {
         list.add("Fifteen");
 
         Assertions.assertEquals(list.get(2), "Three");
-        list.remove("Three");
+        list.remove(2);
         Assertions.assertEquals(list.get(2), "Four");
     }
 }
