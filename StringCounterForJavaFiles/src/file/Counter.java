@@ -5,7 +5,7 @@ import java.util.List;
 
 public class Counter {
 
-    String DIR = "/Users/polinom/Repositories";
+    String DIR = "src";
     FilesManagement management = new FilesManagement(DIR);
 
 

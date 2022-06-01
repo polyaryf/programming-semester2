@@ -2,6 +2,8 @@ package file;
 
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -22,6 +24,7 @@ public class FilesManagement {
                 for (File item : dir.listFiles()) {
                     if (item.isDirectory()) {
                         allJavaFiles(new File(item.getAbsolutePath()));
+
                     } else {
                         if (item.getName().endsWith(".java")) {
                             this.files.add(item.getAbsolutePath());
